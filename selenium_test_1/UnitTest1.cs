@@ -16,7 +16,7 @@ public class Tests
         _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
 
-        Login("khairutdinovaaalisa@gmail.com", "diwhim-5cehda-vexbIb");
+        Login("", "");
     }
     public void Login(string username, string password)
         {
@@ -96,7 +96,7 @@ public class Tests
         var sendButton = _driver.FindElement(By.CssSelector("button.react-ui-1m5qr6w[type='button']"));
         sendButton.Click();
         var newYearElement = _driver.FindElement(By.CssSelector("div.sc-dvUynV"));
-        Assert.That(newYearElement.Displayed, Is.True, "Элемент найден, но не отображается");
+        Assert.That(newYearElement.Displayed, Is.True, "Не получилось найти элемент новогодней темы на странице");
     }
 
     [TearDown]
